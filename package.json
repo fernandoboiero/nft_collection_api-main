@@ -1,0 +1,46 @@
+{
+  "name": "nft_collection_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "db:setup": "ts-node ./src/test/set-up.ts",
+    "start": "ts-node-dev --poll --respawn src/index.ts",
+    "test": "npm run db:setup && jest",
+    "build": "tsc",
+    "local": "npm run build && node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@typegoose/typegoose": "^9.8.1",
+    "apollo-server-express": "^3.6.4",
+    "aws-sdk": "^2.1133.0",
+    "class-validator": "^0.13.2",
+    "express": "^4.17.3",
+    "graphql": "^15.8.0",
+    "graphql-upload": "^13.0.0",
+    "keycloak-connect-graphql": "^0.7.0",
+    "mongodb": "^3.7.3",
+    "mongoose": "^6.3.0",
+    "reflect-metadata": "^0.1.13",
+    "ts-node-dev": "^1.1.8",
+    "type-graphql": "^1.1.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^6.0.0-beta.0",
+    "@types/express": "^4.17.13",
+    "@types/faker": "^6.6.9",
+    "@types/graphql": "^14.5.0",
+    "@types/graphql-upload": "^8.0.11",
+    "@types/jest": "^27.4.1",
+    "@types/node": "^17.0.21",
+    "@types/uuid": "^8.3.4",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.3",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  }
+}

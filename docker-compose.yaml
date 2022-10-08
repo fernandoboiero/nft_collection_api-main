@@ -1,0 +1,25 @@
+services:
+  api:
+    build: .
+    ports:
+      - "4000:4000"
+    volumes:
+      - .:/usr/src/app
+    environment:
+      PORT: 4000
+      MONGO_URL: mongodb://mongo-nft:27017/nft-development
+      NODE_ENV: development
+    depends_on:
+      - mongo-nft
+  mongo-nft:
+    container_name: mongo-nft
+    restart: always
+    image: mongo:latest
+    ports:
+      - "27017:2017"
+    volumes:
+      - mongodata:/data/db
+
+volumes:
+  mongodata:
+

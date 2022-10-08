@@ -1,0 +1,12 @@
+{
+    "type": "mongodb",
+    "host": "localhost",
+    "port": 27017,
+    "database": "mixer2",
+    "synchronize": true,
+    "logging": false,
+    "entities": [
+        "src/entities/*.ts"
+    ],
+    "useUnifiedTopology": true
+}
